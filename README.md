@@ -49,9 +49,33 @@ The 'lib' directory is where the libraries to assist with using the hardware and
 
 Applications
 
-Badge - This is the main function of the badge hardware. It allows you to customize and display a badge with your own image and information.
+badge - This is the main function of the badge hardware. It allows you to customize and display a badge with your own image and information.
 
-Clock - This 
+clock - 
+
+d20 -
+
+Demo -
+
+eBook -
+
+frac -
+
+image -
+
+info -
+
+keybd -
+
+prefs -
+
+therml -
+
+world -
+
+
+
+
 
 
 
