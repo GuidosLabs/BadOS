@@ -34,13 +34,29 @@ Copy all of the files/directories from the CIRTUITPY folder of this repo onto th
 Your badge should now be ready to go. Just press Reset to restart it with BadOS running on CircuitPython.
 
 
-Applications
+BadOS Directory Structure
 
+The 'main.py' Python program in the root directory is the main launcher program for BadOS. 
+
+The 'apps' directory is where the launcher finds all of the application programs for the user to select. 
+
+The 'assets' directory contains three sub-dirs with various fonts, icons and images used by the system.
+
+The 'lib' directory is where the libraries to assist with using the hardware and the BadOS functions are stored.
+
+
+Applications
 
 Custom Applications
 
+To add a custom application, simply create a new folder in 'apps' named for your application. Since space is limited on the menu screen of the badge, any application named more than 6 characters is truncated, so keep that in mind when you name your application. 
+
+Within your new application folder, create two files with the same name as your application but with extensions '.bmp' and '.py'. These will be used by the launcher to create the icon for your application in the menu and for your Python program that will be launched. If the launcher doesn't find a '.bmp', it will use a default icon for your app.
+
 
 Libraries
+
+The best way to see the various functions that are available in the libraries is to review the code for the main.py launcher and the various apps to see how they're imported and used. 
 
 
 
