@@ -34,6 +34,7 @@ Copy all of the files/directories from the CIRTUITPY folder of this repo onto th
 Your badge should now be ready to go. Just press Reset to restart it with BadOS running on CircuitPython.
 
 
+
 BadOS Directory Structure
 
 The 'main.py' Python program in the root directory is the main launcher program for BadOS. 
@@ -45,7 +46,14 @@ The 'assets' directory contains three sub-dirs with various fonts, icons and ima
 The 'lib' directory is where the libraries to assist with using the hardware and the BadOS functions are stored.
 
 
+
 Applications
+
+Badge - This is the main function of the badge hardware. It allows you to customize and display a badge with your own image and information.
+
+Clock - This 
+
+
 
 Custom Applications
 
