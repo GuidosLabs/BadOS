@@ -17,8 +17,8 @@ https://learn.pimoroni.com/article/getting-started-with-badger-2040
 ## Installation of CircuitPython and BadOS
 
 The installation consists of two very simple steps.
-  1. Relace the badge's MicroPython system with CircuitPython.
-  2. Install BadOS system onto the badge.
+  1. Replace the badge's MicroPython system with CircuitPython.
+  2. Install the BadOS system onto the badge.
 
 ### Replacing the MicroPython system with CircuitPython.
 
@@ -32,7 +32,7 @@ Then plug the badge into a USB port. Locate the two small buttons on the back of
 Download the files from this repo.
 After CircuitPython is installed and the badge has been restarted by pressing only the Reset button, it will expose a different partition of its storage as a new flash drive called 'CIRCUITPY'.
 
-Copy all of the files/directories (except the README file) from this repo onto the root CIRCUITPY directory on the badge. At that point, the directory on the badge should have 'main.py' and three folders named 'apps', 'assets' and 'lib'.  That completes step two! 
+Copy all of the files/directories (except the README and LICENSE files; to save storage on the badge) from this repo onto the root CIRCUITPY directory on the badge. At that point, the directory on the badge should have 'main.py' and three folders named 'apps', 'assets' and 'lib'.  That completes step two! 
 
 Your badge should now be ready to go. Just press Reset to restart it with BadOS running on CircuitPython.
 
