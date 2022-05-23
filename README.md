@@ -11,6 +11,7 @@ A good resource for learning about the badge and starting with the original Micr
 https://learn.pimoroni.com/article/getting-started-with-badger-2040
 
 
+- - - -
 
 
 ## Installation of BadOS on CircuitPython
@@ -36,7 +37,7 @@ Copy all of the files/directories from the CIRTUITPY folder of this repo onto th
 Your badge should now be ready to go. Just press Reset to restart it with BadOS running on CircuitPython.
 
 
-
+- - - -
 
 
 ## BadOS Directory Structure
@@ -50,7 +51,7 @@ The 'assets' directory contains three sub-dirs with various fonts, icons and ima
 The 'lib' directory is where the libraries to assist with using the hardware and the BadOS functions are stored.
 
 
-
+- - - -
 
 
 ## Applications
@@ -80,7 +81,7 @@ The 'lib' directory is where the libraries to assist with using the hardware and
 * WORLD - Generate and show simple world map graphic.
 
 
-
+- - - -
 
 
 ## Custom Applications
@@ -90,6 +91,7 @@ To add a custom application, simply create a new folder in 'apps' named for your
 Within your new application folder, create two files with the same name as your application but with extensions '.bmp' and '.py'. These will be used by the launcher to create the icon for your application in the menu and for your Python program that will be launched. If the launcher doesn't find a '.bmp', it will use a default icon for your app.
 
 
+- - - -
 
 
 ## Libraries
