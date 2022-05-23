@@ -44,7 +44,7 @@ Your badge should now be ready to go. Just press Reset to restart it with BadOS 
 
 The 'main.py' Python program in the root directory is the main launcher program for BadOS. 
 
-The 'apps' directory is where the launcher finds all of the application programs for the user to select. 
+The 'apps' directory is where the launcher finds all of the application programs for the user to select. All sub-directories contain a single application listed in the launcher menu.
 
 The 'assets' directory contains three sub-dirs with various fonts, icons and images used by the system.
 
