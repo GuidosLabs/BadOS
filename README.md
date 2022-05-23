@@ -89,7 +89,7 @@ The 'lib' directory is where the libraries to assist with using the hardware and
 
 To customize a badge with your information, you need to create a text file with your info and a bitmap of the image to display.  The bitmap needs to be a valid .bmp file with a black/white single-bit depth palette 104 pixels wide by 128 high or smaller.
 
-In the /badge directory are several example badges. The easiest option is to duplicate or reame one of those directories and the included files to whatever name you like, and change the data in the .txt file to your information. Some of the fields are displayed on the badge, others are used to create a vcard QR code so you can easily provide your contact information to anyone with a smartphone camera.
+In the /badge directory are several example badges. The easiest option is to duplicate or rename one of those directories and the included files to whatever name you like, and change the data in the corresponding .txt file to your information. Some of those fields are displayed on the badge, others are used to create a vcard QR code so you can easily provide your contact information to anyone with a smartphone camera.
 
 
 - - - -
