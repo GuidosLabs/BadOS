@@ -49,29 +49,29 @@ The 'lib' directory is where the libraries to assist with using the hardware and
 
 Applications
 
-badge - This is the main function of the badge hardware. It allows you to customize and display a badge with your own image and information.
+BADGE - This is the main function of the badge hardware. It allows you to customize and display a badge with your own image and information.
 
-clock - 
+CLOCK - Digital and text clock.
 
-d20 -
+D20 - Random roll of a D20 die.
 
-Demo -
+DEMO -  Demonstration of graphics.
 
-eBook -
+EBOOK - Read an electronic book.
 
-frac -
+FRAC -  Generate a fractal graphic of a section of the Mandelbrot set.
 
-image -
+IMAGE - Select and display bitmaps.
 
-info -
+INFO -  Information about the badge hardware and system.
 
-keybd -
+KEYBD - Emulate a keyboard when connected to USB.
 
-prefs -
+PREFS - Preferences. Select the keyboard language country (France or USA).
 
-therml -
+THERML - Future program to support capture and display of image from an attached thermal camera. 
 
-world -
+WORLD - Generate and show simple world map graphic.
 
 
 
