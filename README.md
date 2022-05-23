@@ -1,5 +1,5 @@
 # BadOS
-## * A Badge Operating System for Pimoroni Badger2040 Electronic Badge Using CircuitPython *
+## *A Badge Operating System for Pimoroni Badger2040 Electronic Badge Using CircuitPython*
 
 ## Overview
 
