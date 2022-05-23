@@ -1,6 +1,8 @@
 # BadOS
 ## *Badge Operating System for Pimoroni Badger2040 Electronic Badge Using CircuitPython*
 
+![BadOS](https://github.com/GuidosLabs/BadOS/blob/main/assets/images/BadOS-120.bmp)
+
 ## Overview
 
 The default installation for the Badger2040 is MicroPython, but since CircuitPython offers an easier and more user-friendly system for designing custom applications it was chosen for this system. The inspiration for this mini-OS / launcher came from both the original MicroPython version as well as a CircuitPython version created by BeBoX. 
