@@ -34,7 +34,7 @@ Then plug the badge into a USB port. Locate the two small buttons on the back of
 Download the files from this repo.
 After CircuitPython is installed and the badge has been restarted by pressing only the Reset button, it will expose a different partition of its storage as a new flash drive called 'CIRCUITPY'.
 
-Copy all of the files/directories (except the README and LICENSE files; to save storage on the badge) from this repo onto the root CIRCUITPY directory on the badge. At that point, the directory on the badge should have 'main.py' and three folders named 'apps', 'assets' and 'lib'.  That completes step two! 
+Copy all of the files/directories from the CIRCUITPY directory of this repo onto the root CIRCUITPY directory on the badge. At that point, the directory on the badge should have 'main.py' and three folders named 'apps', 'assets' and 'lib'.  That completes step two! 
 
 Your badge should now be ready to go. Just press Reset to restart it with BadOS running on CircuitPython.
 
