@@ -70,13 +70,13 @@ The 'lib' directory is where the libraries to assist with using the hardware and
 
 * IMAGE - Select and display bitmaps.
 
-* INFO -  Information about the badge hardware and system.
+* INFO -  Information about the badge hardware and BadOS.
 
 * KEYBD - Emulate a keyboard when connected to USB.
 
 * PREFS - Preferences. Select the keyboard language country (France or USA).
 
-* THERML - Future program to support capture and display of image from an attached thermal camera. 
+* THERML - Future program to support capture and display of real-time images from a thermal camera accessory for the badge. 
 
 * WORLD - Generate and show simple world map graphic.
 
