@@ -14,7 +14,7 @@ https://learn.pimoroni.com/article/getting-started-with-badger-2040
 - - - -
 
 
-## Installation of BadOS on CircuitPython
+## Installation of CircuitPython and BadOS
 
 The installation consists of two very simple steps.
   1. Relace the badge's MicroPython system with CircuitPython.
@@ -22,17 +22,17 @@ The installation consists of two very simple steps.
 
 ### Replacing the MicroPython system with CircuitPython.
 
-The Badger2040 hardware/firmware design makes this very easy. First, download the latest version of CircuitPython for this hardware from the following link:
+The Badger2040 hardware/firmware design makes this very easy. First, download the latest version of CircuitPython for this hardware from the following link. It will be a file with the .UF2 extension.
 https://circuitpython.org/board/pimoroni_badger2040/
 
-Then plug the badge into a USB port and press the Reset button on the back of the badge while first holding the adjacent User button. The badge will expose a partition of its storage as a flash drive named 'RPI-RP2'. Simply copy (or click-drag) the downloaded CircuitPython .UF2 file onto the root directory of this drive (alongside the .HTM and .TXT files). Once the UF2 file is in place, just press the Reset button and the badge firmware will install CircuitPython. That completes step one!
+Then plug the badge into a USB port. Locate the two small buttons on the back of the badge at the top. While holding the button labeled 'boot/usr', press the nearby Reset button labeled 'rsc'. The badge will reset, make a USB connection and expose part of its storage as a flash drive named 'RPI-RP2'. Simply copy (or click-drag) the downloaded CircuitPython .UF2 file onto the root directory of this drive (alongside the .HTM and .TXT files). Once the UF2 file is in place, just press the Reset button again and the badge firmware will install CircuitPython. That completes step one!
 
 ### Install BadOS
 
-Download the files from this repo (or from the .zip file).
+Download the files from this repo.
 After CircuitPython is installed and the badge has been restarted by pressing only the Reset button, it will expose a different partition of its storage as a new flash drive called 'CIRCUITPY'.
 
-Copy all of the files/directories from the CIRTUITPY folder of this repo onto the root folder of CIRCUITPY on the badge. At that point, the root folder on the badge should have 'main.py' and three folders named 'apps', 'assets' and 'lib'.  That completes step two! 
+Copy all of the files/directories (except the README file) from this repo onto the root CIRCUITPY directory on the badge. At that point, the directory on the badge should have 'main.py' and three folders named 'apps', 'assets' and 'lib'.  That completes step two! 
 
 Your badge should now be ready to go. Just press Reset to restart it with BadOS running on CircuitPython.
 
@@ -83,6 +83,14 @@ The 'lib' directory is where the libraries to assist with using the hardware and
 
 - - - -
 
+## Customizing the Badge Layout
+
+To customize a badge with your information, you need to create a text file with your info and a bitmap of the image to display.  The bitmap needs to be a valid .bmp file with a black/white single-bit depth palette 104 pixels wide by 128 high or smaller.
+
+In the /badge directory are several example badges. The easiest option is to duplicate or reame one of those directories and the included files to whatever name you like, and change the data in the .txt file to your information. Some of the fields are displayed on the badge, others are used to create a vcard QR code so you can easily provide your contact information to anyone with a smartphone camera.
+
+
+- - - -
 
 ## Custom Applications
 
