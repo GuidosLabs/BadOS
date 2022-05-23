@@ -11,6 +11,8 @@ A good resource for learning about the badge and starting with the original Micr
 https://learn.pimoroni.com/article/getting-started-with-badger-2040
 
 
+
+
 ### Installation of BadOS on CircuitPython
 
 The installation consists of two very simple steps.
@@ -35,6 +37,8 @@ Your badge should now be ready to go. Just press Reset to restart it with BadOS 
 
 
 
+
+
 ### BadOS Directory Structure
 
 The 'main.py' Python program in the root directory is the main launcher program for BadOS. 
@@ -47,33 +51,33 @@ The 'lib' directory is where the libraries to assist with using the hardware and
 
 
 
+
+
 ### Applications
 
-BADGE - This is the main function of the badge hardware. It allows you to customize and display a badge with your own image and information.
+* BADGE - This is the main function of the badge hardware. It allows you to customize and display a badge with your own image and information.
 
-CLOCK - Digital and text clock.
+* CLOCK - Digital and text clock.
 
-D20 - Random roll of a D20 die.
+* D20 - Random roll of a D20 die.
 
-DEMO -  Demonstration of graphics.
+* DEMO -  Demonstration of graphics.
 
-EBOOK - Read an electronic book.
+* EBOOK - Read an electronic book.
 
-FRAC -  Generate a fractal graphic of a section of the Mandelbrot set.
+* FRAC -  Generate a fractal graphic of a section of the Mandelbrot set.
 
-IMAGE - Select and display bitmaps.
+* IMAGE - Select and display bitmaps.
 
-INFO -  Information about the badge hardware and system.
+* INFO -  Information about the badge hardware and system.
 
-KEYBD - Emulate a keyboard when connected to USB.
+* KEYBD - Emulate a keyboard when connected to USB.
 
-PREFS - Preferences. Select the keyboard language country (France or USA).
+* PREFS - Preferences. Select the keyboard language country (France or USA).
 
-THERML - Future program to support capture and display of image from an attached thermal camera. 
+* THERML - Future program to support capture and display of image from an attached thermal camera. 
 
-WORLD - Generate and show simple world map graphic.
-
-
+* WORLD - Generate and show simple world map graphic.
 
 
 
@@ -84,6 +88,8 @@ WORLD - Generate and show simple world map graphic.
 To add a custom application, simply create a new folder in 'apps' named for your application. Since space is limited on the menu screen of the badge, any application named more than 6 characters is truncated, so keep that in mind when you name your application. 
 
 Within your new application folder, create two files with the same name as your application but with extensions '.bmp' and '.py'. These will be used by the launcher to create the icon for your application in the menu and for your Python program that will be launched. If the launcher doesn't find a '.bmp', it will use a default icon for your app.
+
+
 
 
 ### Libraries
