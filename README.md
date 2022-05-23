@@ -114,13 +114,15 @@ The best way to see the various functions that are available in the libraries is
 
 ## Issues and Work-In-Process
 
-The Demo application, which shows some badge layout and graphics capability is virtually unchanged from BeBoX version. It is being comletely rewritten and should be available here soon.
+The Demo application, which shows some badge layout and graphics capability is virtually unchanged from the BeBoX version. It is being comletely rewritten and should be available here soon.
 
 The Keybd app is currently not operational and is also being rewritten. At that point, it will include the HID capability.
 
 The Ebook app does a simple line-wrap of the text without regard to any words which are split. It also needs to handle some special characters which currently perform line-feeds and other control functions at inappropriate locations. This will be fixed soon.
 
 The Therml app is a future application requiring hardware which is currently not available.
+
+Documentation explaining how to use the BadOS library functions for Screen, Buttons, Menu and other capabilities is being written and should be available here soon. Until then, you can at least see how they are used in the various sample applications. 
 
 Thank you for your patience! I hope you enjoy using BadOS.
 
