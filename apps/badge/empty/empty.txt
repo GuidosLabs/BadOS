@@ -1,0 +1,10 @@
+company
+name
+detail1_title
+detail1_text
+detail2_title
+detail2_text
+Work phone number
+Cell phone number
+email@provider.net
+Https://www.homepage.net

@@ -1,0 +1,7 @@
+Hardware by Pimoroni
+Dual-core RP2040, 133MHz, 264KB RAM
+2MB Flash (1MB OS, 1MB Storage)
+296x128 pixel Black/White e-Ink
+
+Operating System by Dave Guidos
+Inspired by BadgerOS, BeBoX
