@@ -47,10 +47,8 @@ class Screen:
     def __init__(self, background_color = WHITE, with_status_bar = True):
         # get fonts
         font = bitmap_font.load_font(self.FONTS_DIR + 'Arial-12.bdf')
-        #font2 = bitmap_font.load_font(FONTS_DIR + 'Arial-Bold-24.bdf')
         font2 = bitmap_font.load_font(self.FONTS_DIR + 'Earth 2073-18.bdf')
         font3=terminalio.FONT
-        #font_sizes = (0.5, 0.7, 0.9)
         self.fonts = [font, font2, font3]
         self.background_color = background_color
         self.background_palette = self.palette_inverted if background_color == BLACK else self.palette
