@@ -7,7 +7,7 @@
 
 The default installation for the Badger2040 is MicroPython, but since CircuitPython offers an easier and more user-friendly system for designing custom applications it was chosen for this system. The inspiration for this mini-OS / launcher came from both the original MicroPython version as well as a CircuitPython version created by BeBoX. 
 
-Since this is a major restructure and rewrite of both systems, it was decided to create an entirely new repo rather than a fork of either of those systems; but since BadOS retains some of the look and feel of those systems and uses a some of their code is several areas, it's only appropriate to give proper credit to both of those systems.
+Since this is a major restructure and rewrite of both systems, it was decided to create an entirely new repo rather than a fork of either of those systems; but since BadOS retains some of the look and feel of those systems and uses some of their code in several areas, it's only appropriate to give proper credit to both of those systems.
 
 A good resource for learning about the badge and starting with the original MicroPython system can be found at Pimoroni with this link:
 https://learn.pimoroni.com/article/getting-started-with-badger-2040
