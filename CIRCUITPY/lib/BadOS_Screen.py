@@ -55,8 +55,10 @@ class Screen:
         self.background_color = background_color
         self.background_palette = self.palette_inverted if background_color == BLACK else self.palette
         self.status_bar = Status_Bar(self.display)
-        self._status_bar_visible = with_status_bar
         self.value = self.create_screen()
+        # force setting visibility value by change
+        self._status_bar_visible = not with_status_bar
+        self.status_bar_visible = with_status_bar
 
     @property
     def status_bar_visible(self):
@@ -76,7 +78,6 @@ class Screen:
                 self.value.pop(1)
         self._status_bar_visible = value
 
-
     # create and layout display screen
     def create_screen(self):
         screen = displayio.Group()
@@ -95,6 +96,12 @@ class Screen:
         while self.display.busy==True:
             time.sleep(0.01)     
         self.display.refresh()
+
+    # clear screen
+    # remove all screen objects, except the background and status bar (if visible)
+    def clear(self):
+        while len(self.value) > (2 if self.status_bar_visible else 1):
+            self.value.pop()
 
     @staticmethod
     # create thumbnail of bitmap image

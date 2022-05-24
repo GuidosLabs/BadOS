@@ -1,125 +1,62 @@
 '''
-    demo.py
-    Demo of Screen Setup and Graphics for the Badger2040 eInk Badge
-    David Guidos, May 2022
+helpfull demo file by BeBoX to help users programing their
+personnal badge applications
+demo show various usage of displayio libs
+contact : depanet@gmail.com
+twitter : @beboxos
 '''
-
 import time
-import supervisor
-import displayio, terminalio, vectorio
-import adafruit_imageload
-from adafruit_bitmap_font import bitmap_font
+import board, terminalio, displayio, vectorio, supervisor
 from adafruit_display_text import label
-from adafruit_display_shapes.circle import Circle
-from adafruit_display_shapes.line import Line
-from adafruit_display_shapes.polygon import Polygon
+from adafruit_bitmap_font import bitmap_font
+import adafruit_imageload
 from adafruit_display_shapes.rect import Rect
+from adafruit_display_shapes.circle import Circle
 from adafruit_display_shapes.roundrect import RoundRect
 from adafruit_display_shapes.triangle import Triangle
+from adafruit_display_shapes.line import Line
+from adafruit_display_shapes.polygon import Polygon
 
-from BadOS_Screen import Screen
-from BadOS_Buttons import Buttons
+import adafruit_miniqr
 
+display = board.DISPLAY
+
+# Set text, font, and color
+title = "Hello World"
+subtitle = "From CircuitPython"
+font2 = terminalio.FONT
+font = bitmap_font.load_font("/assets/fonts/Arial-12.bdf")
+color = 0x000000
 WHITE = 0xFFFFFF
 BLACK = 0x000000
 
-#   f u n c t i o n s
+# Set the palette for the background color
+palette = displayio.Palette(1)
+palette[0] = 0xFFFFFF
 
+# Add a background rectangle
+rectangle = vectorio.Rectangle(pixel_shader=palette, width=298-110, height=display.height-8, x=4, y=4)
 
-#   m a i n   
+# Create the title and subtitle labels
+title_label = label.Label(font, text=title, color=color, scale=2)
+subtitle_label = label.Label(font, text=subtitle, color=color, scale=1)
 
-# initialize display
-scr = Screen(background_color = WHITE, with_status_bar = False)
+# Set the label locations
+title_label.x = 10
+title_label.y = 45
 
-# set up buttons
-btns = Buttons()
+subtitle_label.x = 10
+subtitle_label.y = 90
 
-# -----------------------------------
-
-# get sample image (BadOS Logo)
-bados_image, bados_palette = adafruit_imageload.load('/assets/images/BadOS-120.bmp', bitmap=displayio.Bitmap, palette=displayio.Palette)
-# add full-size and scaled 2/3, 1/3 images to the screen
-x, y = 5, 5
-for i in range(3):
-    # scale it
-    img, pal = scr.thumbnail(bados_image, bados_palette, thumbnail_width = -1, thumbnail_height = int((1 - (i / 3)) * bados_image.height))
-    # add the images to the display
-    tile_grid = displayio.TileGrid(img, pixel_shader=pal)
-    tile_grid.x, tile_grid.y = x, y
-    scr.value.append(tile_grid)
-    x += img.width + 10
-
-scr.render()
-
-# display for 5 seconds
-time.sleep(5)
-
-# -----------------------------------
-
-scr.clear()
-
-triangle = Triangle(170, 20, 140, 90, 210, 100, fill=0x999999, outline=0x000000)
-scr.value.append(triangle)
-
-rect = Rect(80, 20, 41, 41, fill=0x999999, outline=0x666666)
-scr.value.append(rect)
-
-circle = Circle(100, 100, 20, fill=0xFFFFFF, outline=0x000000)
-scr.value.append(circle)
-
-scr.render()
-
-# display for 5 seconds
-time.sleep(5)
-
-
-# -----------------------------------
-
-
-
-# -----------------------------------
-
-
-
-# -----------------------------------
-
-
-# loop until timeout or arrow button clicked
-end_requested = False
-start_time = time.monotonic()
-while not end_requested:
-    if btns.states_index() == 3 or btns.states_index() == 4:
-        # up or down clicked
-        end_requested = True
-    if time.monotonic() > start_time + 30:
-        # 30 sec timeout
-        end_requested = True
-    time.sleep(0.05)
-
-# return to the menu
-supervisor.reload()
-
-'''
-
-
-# display the info
-LINE_HEIGHT = 16
-y = int(LINE_HEIGHT * 1.5)
-with open('/apps/info/info.txt') as info_file:
-    for info_line in info_file:
-        textline = label.Label(scr.fonts[2], text=info_line, color=BLACK, scale=1)
-        textline.x, textline.y =  10, y
-        scr.value.append(textline)
-        y += LINE_HEIGHT
-        print(f'Screen Y: {y}   {len(scr.value)}')
-    # add the OS image
-    image, palette = adafruit_imageload.load('/assets/images/BadOS-120.bmp', bitmap=displayio.Bitmap, palette=displayio.Palette)
-    image, palette = scr.thumbnail(image, palette, thumbnail_width = 80, thumbnail_height = -1)
-    tile_grid = displayio.TileGrid(image, pixel_shader=palette)
-    tile_grid.x, tile_grid.y = 215, 55
-    scr.value.append(tile_grid)
-
-
+# Create the display group and append objects to it
+group = displayio.Group()
+print("group len" + str(len(group)))
+group.append(rectangle)
+print("group len" + str(len(group)))
+group.append(title_label)
+print("group len" + str(len(group)))
+group.append(subtitle_label)
+print("group len" + str(len(group)))
 
 #image
 image, palette = adafruit_imageload.load(
@@ -256,5 +193,3 @@ time.sleep(5)
 supervisor.reload()
 
 print('info app ended')
-
-'''
