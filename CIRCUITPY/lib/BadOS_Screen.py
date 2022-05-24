@@ -56,9 +56,9 @@ class Screen:
         self.background_palette = self.palette_inverted if background_color == BLACK else self.palette
         self.status_bar = Status_Bar(self.display)
         self.value = self.create_screen()
-        # force setting visibility value by change
-        self._status_bar_visible = not with_status_bar
-        self.status_bar_visible = with_status_bar
+        self._status_bar_visible = with_status_bar
+        if not with_status_bar:
+            self.value.pop()
 
     @property
     def status_bar_visible(self):
