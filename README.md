@@ -3,6 +3,7 @@
 
 ![BadOS](https://github.com/GuidosLabs/BadOS/blob/main/CIRCUITPY/assets/images/BadOS-120.bmp)
 
+![BadOS_Image](https://github.com/GuidosLabs/BadOS/blob/main/ACE8A8C5-8EA8-4D8F-9D72-653DC783588A.jpeg)
 ## Overview
 
 The default installation for the Badger2040 is MicroPython, but since CircuitPython offers an easier and more user-friendly system for designing custom applications it was chosen for this system. The inspiration for this mini-OS / launcher came from both the original MicroPython version as well as a CircuitPython version created by BeBoX. 
