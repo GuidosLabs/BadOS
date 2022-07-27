@@ -25,6 +25,26 @@ BLACK = 0x000000
 
 #   f u n c t i o n s
 
+# find center point of a bounding box of a list of points
+# note: if points are end points of a line segment, the returned point is the midpoint
+def center_point(points):
+    	return ( 
+		(max([p[0] for p in points]) + min([p[0] for p in points])) / 2,
+		(max([p[1] for p in points]) + min([p[1] for p in points])) / 2 
+		)
+
+# normalize a list of points to their center point
+def normalize_points(points):
+    (cpx, cpy) = center_point(points) 
+    return [(x - cpx, y - cpy) for (x, y) in points]
+
+def positioned_triangle(points, center_point, scale, fill_color, outline_color):
+    triangle = Triangle(int(points[0][0] * scale + center_point[0]), int(points[0][1] * scale + center_point[1]), 
+                        int(points[1][0] * scale + center_point[0]), int(points[1][1] * scale + center_point[1]), 
+                        int(points[2][0] * scale + center_point[0]), int(points[2][1] * scale + center_point[1]), 
+                        fill=fill_color, outline=outline_color)
+    return triangle
+
 
 #   m a i n   
 
@@ -58,14 +78,36 @@ time.sleep(5)
 
 scr.clear()
 
-triangle = Triangle(170, 20, 140, 90, 210, 100, fill=0x999999, outline=0x000000)
-scr.value.append(triangle)
+# triangles
+tri = normalize_points([(85, 10), (70, 45), (105, 50)])
+tri_center = (220, 70)
+scale_step = 1
+for s in range(5, 0, -scale_step):
+    scr.value.append(positioned_triangle(tri, tri_center, s / 2.0, fill_color=0x111111, outline_color=0x000000))
+    scr.value.append(positioned_triangle(tri, tri_center, (s - scale_step / 2.0) / 2.0, fill_color=0xFFFFFF, outline_color=0x000000))
 
-rect = Rect(80, 20, 41, 41, fill=0x999999, outline=0x666666)
-scr.value.append(rect)
+# square
+square = Rect(80, 20, 42, 42, fill=0x000000, outline=0x000000)
+scr.value.append(square)
+square = Rect(85, 25, 21, 21, fill=0xFFFFFF, outline=0x000000)
+scr.value.append(square)
 
-circle = Circle(100, 100, 20, fill=0xFFFFFF, outline=0x000000)
+# circle
+circle = Circle(100, 100, 21, fill=0x000000, outline=0x000000)
 scr.value.append(circle)
+circle = Circle(95, 95, 10, fill=0xFFFFFF, outline=0x000000)
+scr.value.append(circle)
+
+# texts
+txt=label.Label(font=scr.fonts[0], text='Squares', color=BLACK, scale=1)
+txt.x, txt.y = 10, 40
+scr.value.append(txt)
+txt=label.Label(font=scr.fonts[0], text='Circles', color=BLACK, scale=1)
+txt.x, txt.y = 10, 100
+scr.value.append(txt)
+txt=label.Label(font=scr.fonts[0], text='Triangles', color=BLACK, scale=1)
+txt.x, txt.y = 180, 5
+scr.value.append(txt)
 
 scr.render()
 
