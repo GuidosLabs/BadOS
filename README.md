@@ -6,7 +6,7 @@
 ![BadOS_Image](https://github.com/GuidosLabs/BadOS/blob/main/ACE8A8C5-8EA8-4D8F-9D72-653DC783588A.jpeg)
 ## Overview
 
-The default installation for the Badger2040 is MicroPython, but since CircuitPython offers an easier and more user-friendly system for designing custom applications it was chosen for this system. The inspiration for this mini-OS / launcher came from both the original MicroPython version as well as a CircuitPython version created by BeBoX. 
+The default installation for the Badger2040 is MicroPython, but since CircuitPython offers an easier and more user-friendly system for designing custom applications, it was chosen for this system. The inspiration for this mini-OS / launcher came from both the original MicroPython version as well as a CircuitPython version created by BeBoX. 
 
 Since this is a major restructure and rewrite of both systems, it was decided to create an entirely new repo rather than a fork of either of those systems; but since BadOS retains some of the look and feel of those systems and uses some of their code in several areas, it's only appropriate to give proper credit to both of those systems.
 
@@ -28,7 +28,7 @@ The installation consists of two very simple steps.
 The Badger2040 hardware/firmware design makes this very easy. First, download the latest version of CircuitPython for this hardware from the following link. It will be a file with the .UF2 extension.
 https://circuitpython.org/board/pimoroni_badger2040/
 
-Then plug the badge into a USB port. Locate the two small buttons on the back of the badge at the top. While holding the button labeled 'boot/usr', press the nearby Reset button labeled 'rsc'. The badge will reset, make a USB connection and expose part of its storage as a flash drive named 'RPI-RP2'. Simply copy (or click-drag) the downloaded CircuitPython .UF2 file onto the root directory of this drive (alongside the .HTM and .TXT files). Once the UF2 file is in place, just press the Reset button again and the badge firmware will install CircuitPython. That completes step one!
+Then plug the badge into a USB port. Locate the two small buttons on the back of the badge at the top. While holding the button labeled 'boot/usr', press the nearby Reset button labeled 'rst'. The badge will reset, make a USB connection and expose part of its storage as a flash drive named 'RPI-RP2'. Simply copy (or click-drag) the downloaded CircuitPython .UF2 file onto the root directory of this drive (alongside the .HTM and .TXT files). Once the UF2 file is in place, just press the Reset button again and the badge firmware will install CircuitPython. That completes step one!
 
 ### Install BadOS
 
