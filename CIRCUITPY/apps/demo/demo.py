@@ -83,19 +83,19 @@ tri = normalize_points([(85, 10), (70, 45), (105, 50)])
 tri_center = (220, 70)
 scale_step = 1
 for s in range(5, 0, -scale_step):
-    scr.value.append(positioned_triangle(tri, tri_center, s / 2.0, fill_color=0x111111, outline_color=0x000000))
-    scr.value.append(positioned_triangle(tri, tri_center, (s - scale_step / 2.0) / 2.0, fill_color=0xFFFFFF, outline_color=0x000000))
+    scr.value.append(positioned_triangle(tri, tri_center, s / 2.0, fill_color=BLACK, outline_color=BLACK))
+    scr.value.append(positioned_triangle(tri, tri_center, (s - scale_step / 2.0) / 2.0, fill_color=WHITE, outline_color=BLACK))
 
 # square
-square = Rect(80, 20, 42, 42, fill=0x000000, outline=0x000000)
+square = Rect(80, 20, 42, 42, fill=BLACK, outline=BLACK)
 scr.value.append(square)
-square = Rect(85, 25, 21, 21, fill=0xFFFFFF, outline=0x000000)
+square = Rect(85, 25, 21, 21, fill=WHITE, outline=BLACK)
 scr.value.append(square)
 
 # circle
-circle = Circle(100, 100, 21, fill=0x000000, outline=0x000000)
+circle = Circle(100, 100, 21, fill=BLACK, outline=BLACK)
 scr.value.append(circle)
-circle = Circle(95, 95, 10, fill=0xFFFFFF, outline=0x000000)
+circle = Circle(95, 95, 10, fill=WHITE, outline=BLACK)
 scr.value.append(circle)
 
 # texts
